@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>
+    SNAP Simulator
+  </title>
+
+  <!-- Stylesheets -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css"> -->
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+  <!-- JavaScript -->
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  <!-- Semantic UI -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.js"></script>
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- App Scripts -->
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="snapSim">
+  <div class="container" ng-controller="appController">
+    <h1 id="title">
+      <span class="green">Snap</span>Sim
+    </h1>
+    <p>An interactive simulation of the challenges a family on SNAP benefits may face.</p>
+    <div class="ui divider"></div>
+    <div id="firstpage" class="ui nine wide centered page grid" ng-show="pageNumber == 1">
+      <div class="two column row">
+        <h2 class="header">Your name is Alexa Hansen.</h2>
+      </div>
+      <div class="ten wide column ui card">
+        <div class="content">
+          <!-- <span class="header">Alexa Hansen</span> -->
+          <div class="description">
+            <p>
+              You are a 32 year old widowed mother from Ridgeport, Mississippi.
+            </p>
+            <p>
+              Before your husband died, you were a stay-at-home mother who left your career to take care of your two children, Paul and Jane. After his death, you found it difficult to pay for your two-story home, especially after being out of the job-market for so long. You've since moved into a small 2-bedroom apartment in a different neighborhood with cheaper housing.
+            </p>
+            <p>
+              You've recently got a job as a waitress at a local restaurant. It does not pay very well, but it is your primary source of income. You start work at 8AM and leave for home at 6PM.
+            </p>
+          </div>
+        </div> <!-- description -->
+      </div> <!-- alexa row card -->
+      <div class="two column row">
+        <h2 class="header">You have two children.</h2>
+      </div>
+      <div class="row five wide">
+        <div class="five wide column ui card">
+          <div class="content">
+            <span class="header">Paul Hansen</span>
+            <div class="description">
+              <p>
+                Paul is an energetic four-year-old who has just started preschool.
+              </p>
+              <p>
+                Things have been especially tough for him now because he lost his father and because you have to work so often. He's used to being taken everywhere with you, and is having trouble adjusting.
+              </p>
+              <p>
+                You try to treat him with his favorite snacks to accompany the school's free lunch program, since you know he doesn't like it very much.
+              </p>
+            </div>
+          </div> <!-- description -->
+        </div> <!-- child 1 card -->
+        <div class="column"></div>
+        <div class="five wide column ui card">
+          <div class="content">
+            <span class="header">Jane Hansen</span>
+            <div class="description">
+              <p>
+                Jane is a bright 14 year old who is a straight-A student and loves theater.
+              </p>
+              <p>
+                She had hoped to join the school's theater club, but could not because she babysits Paul after school each day since afterschool is expensive.
+              </p>
+              <p>
+                She has considered babysitting other children in the neighborhood, or finding a job, to help pay for family costs, though you have tried not to let her worry about money.
+              </p>
+            </div>
+          </div> <!-- description -->
+        </div> <!-- child 2 card -->
+      </div> <!-- kids row -->
+      <div class="two column row">
+        <h2 class="header">You need groceries.</h2>
+      </div>
+      <div class="twelve wide column">
+        <p>
+          You've has gone to Greenshop, the local supermarket, after work, and have picked up a few groceries. You hope to return home to spend a little time with your kids before they go to sleep.
+        </p>
+        <p>
+          However, the cost of the groceries you've selected exceed the amount of money on your SNAP card, and you don't have extra cash to pay for anything else.
+        </p>
+<!--         <p>
+          As you clear the cart, look at why Alexa has chosen each item, and pay attention to the sacrifices being made.
+        </p> -->
+        <p>You must remove some items from your cart until you are able to pay for what is left.
+      </div> <!-- job row -->
+      <div class="ui divider"></div>
+      <button class="ui primary button" ng-click="advancePage()">Begin</button>
+    </div> <!-- first page -->
+
+    <div ng-show="pageNumber == 2"> <!-- TODO: Figure out how to center with semantic UI, centered grid isn't working -->
+      <div id="budget" class="ui sticky">
+      <h2>Balance: <span ng-class="used < 0 ? 'red' : 'green'"> ${{budget - used}}</span>, Budget: ${{budget}}</h2>
+      </div>
+      <div id="food-items" class="" style="margin-left: 8%">
+        <div class="item" ng-repeat="item in story.items | orderBy: 'name'">
+          <!-- <div class="content"> -->
+            <span class="header">{{item.name}}</span>
+            <!-- <div class="meta"> -->
+              <!-- <span>{{item.description}}</span> -->
+            <!-- </div> -->
+            <!-- <div class="description"> -->
+              <!-- {{item.notes}} -->
+            <!-- </div> -->
+          </div>
+          <!-- <div class="extra content">
+            <h3>${{item.price}}</h3>
+          </div>
+          <div class="ui bottom attached purple button" ng-click="itemSelected(item)" ng-if="item.selected">
+            Remove
+          </div>
+          <div class="ui bottom attached teal button" ng-click="itemSelected(item)" ng-if="!item.selected">
+           Add Back 
+          </div> -->
+        </div>
+      </div> <!-- second page -->
+    </div>
+  </div>
+</body>
+</html>
