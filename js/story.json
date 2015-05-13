@@ -32,7 +32,7 @@
       "options": [
         {
           "section": "paying",
-          "description": "Wonder how much the items will cost."
+          "description": "Try to keep up."
         }
       ]
     },
@@ -49,16 +49,25 @@
         },
         {
           "section": "give-up",
-          "description": "Cancel your purchase and leave."
+          "description": "Cancel your purchase, and leave."
         }
       ]
     },
     "coupons": {
-      "text":"",
-      "options": []
+      "text":"The person behind you coughs. The cashier shakes her head, and asks again how you'd like to pay for your food.",
+      "options": [
+        {
+          "section": "shopping-cart",
+          "description": "Apologize, and ask to take out some items."
+        },
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase, and leave."
+        }
+      ]
     },
     "give-up": {
-      "text":"",
+      "text":"The cashier isn't happy to hear that she'll have to put all of the food you didn't purchase away, and hurriedly moves on to the next customer. As you walk away, you remember that you'll have to find something for your two children to eat for dinner.",
       "options": []
     },
       "shopping-cart": {
@@ -66,71 +75,10 @@
       "options": [
         {
           "section": "give-up",
-          "description": "Cancel your purchase and leave."
+          "description": "Cancel your purchase, and leave."
         }
       ]
     }
   },
-  "shopping-cart-items": [
-    {
-      "notes": "Kids need the calcium and vitamin D in milk. But on top of that, Paul has been having trouble sleeping recently, and a glass of milk before bed helps him sleep.",
-      "price": 1.29,
-      "name": "Whole milk",
-      "description": "A gallon of Greenshop-brand whole milk"
-    },
-    {
-      "notes": "It's not as healthy as organic greek yogurt, but the kids need something for their snack time at school. The past few weeks, they haven't been taking anything.",
-      "price": 2.0,
-      "name": "Yogurt",
-      "description": "6-pack of 'Danimals' yogurt cups"
-    },
-    {
-      "notes": "Protein rich - a healthy option for the childens' snacktime at school",
-      "price": 5.0,
-      "name": "Greek Yogurt",
-      "description": "Organic, greek yogurt"
-    },
-    {
-      "notes": "Working a 10 hour day is exhausting, and this would save Alexa a great deal of time from cooking which she instead use to spend time with her children",
-      "price": 2.0,
-      "name": "Frozen macaroni and cheese",
-      "description": "Macaroni and cheese - serves 3"
-    },
-    {
-      "notes": "It's important to get vegetables, and while these aren't as healthy or tasty as fresh vegetables, they do save Alexa the time of cutting the vegetables. But, it has been hard to get Paul and Sophie to eat the vegetables - they tend to throw them away",
-      "price": 1.0,
-      "name": "Mixed vegetables",
-      "description": "A bag of frozen corn, peas, and carrots"
-    },
-    {
-      "notes": "The past two months, the family has been eating cereal for breakfast. The kids (and Alexa) have been getting sick of it, so this would be a nice treat to start the day",
-      "price": 2.0,
-      "name": "Frozen waffles",
-      "description": "8 Eggo frozen waffles"
-    },
-    {
-      "notes": "This would be a quick and convenient snack for the family. However, it's quite pricy",
-      "price": 2.99,
-      "name": "Apples",
-      "description": "Bag of 8 apples"
-    },
-    {
-      "notes": "While expensive, the kids might actually eat this",
-      "price": 0.99,
-      "name": "Mango",
-      "description": "Ataulfo mangos"
-    },
-    {
-      "notes": "These look nice, but Alexa doesn't know when she'll have the time to actually cook them in something",
-      "price": 1.49,
-      "name": "Mini sweet peppers",
-      "description": "A pound of sweet Italian Cubanelle peppers"
-    },
-    {
-      "notes": "Cooking these into a dish may be hard, but Alexa thinks she may be able to steam them. But would the kids eat this?",
-      "price": 2.0,
-      "name": "Green beans",
-      "description": "A 12 oz bag of green beans"
-    }
-  ]
+  "shopping-cart-items":[{"notes": "Kids need the calcium and vitamin D in milk. But on top of that, Paul has been having trouble sleeping recently, and a glass of milk before bed helps him sleep.", "price": 1.29, "name": "Whole milk", "description": "A gallon of Greenshop-brand whole milk"}, {"notes": "It's not as healthy as organic greek yogurt, but the kids need something for their snack time at school. The past few weeks, they haven't been taking anything.", "price": 2.0, "name": "Yogurt", "description": "6-pack of 'Danimals' yogurt cups"}, {"notes": "Protein rich - a healthy option for the childens' snacktime at school", "price": 5.0, "name": "Greek Yogurt", "description": "Organic, greek yogurt"}, {"notes": "Working a 10 hour day is exhausting, and this would save Alexa a great deal of time from cooking which she instead use to spend time with her children", "price": 2.0, "name": "Frozen macaroni and cheese", "description": "Macaroni and cheese - serves 3"}, {"notes": "It's important to get vegetables, and while these aren't as healthy or tasty as fresh vegetables, they do save Alexa the time of cutting the vegetables. But, it has been hard to get Paul and Sophie to eat the vegetables - they tend to throw them away.", "price": 1.0, "name": "Mixed vegetables", "description": "A bag of frozen corn, peas, and carrots"}, {"notes": "The past two months, the family has been eating cereal for breakfast. The kids (and Alexa) have been getting sick of it, so this would be a nice treat to start the day", "price": 2.0, "name": "Frozen waffles", "description": "8 Eggo frozen waffles"}, {"notes": "A summer treat and Sophie's favourite flavor. Bringing this home would make the kids really happy, especially since you haven't been able to spend as much time with them lately.", "price": 5.0, "name": "Hood Ice Cream", "description": "From the New England Creamery"}, {"notes": "This would be a quick and convenient snack for the family. However, it's quite pricy.", "price": 2.99, "name": "Apples", "description": "Bag of 8 apples"}, {"notes": "While expensive, the kids might actually eat this.", "price": 0.99, "name": "Mango", "description": "Ataulfo mangos"}, {"notes": "These look nice, but Alexa doesn't know when she'll have the time to actually cook them in something.", "price": 1.49, "name": "Mini sweet peppers", "description": "A pound of sweet Italian Cubanelle peppers"}, {"notes": "Cooking these into a dish may be hard, but Alexa thinks she may be able to steam them. But would the kids eat this?", "price": 2.0, "name": "Green beans", "description": "A 12 oz bag of green beans"}, {"notes": "Cooking these will take some time, but the kids always like your potatoes.", "price": 2.29, "name": "Potatoes", "description": "A 5lb bag of Florida Red Potatoes"}, {"notes": "These are pricy, but your absolute favorite fruit. You've been working really hard lately, don't you deserve a treat?", "price": 2.5, "name": "Raspberries", "description": "6oz Package of Driscoll's Premium Raspberries"}, {"notes": "This would make for great sandwiches. Sophie strongly dislikes the school lunches, but has been eating them because she is a good sport. Buying her some sandwich supplies would make her very happy.", "price": 4.99, "name": "Ham", "description": "1lb of Thinly Sliced Cooked Ham"}, {"notes": "What is a sandwich without cheese?", "price": 2.99, "name": "American Cheese", "description": "1lb of American Sliced Cheese"}, {"notes": "All natural. The kids always love your chicken, only problem is finding the time to cook it. You don't even get home from work until after 6pm.", "price": 1.99, "name": "Chicken", "description": "1lb of Boneless Chicken Thighs"}, {"notes": "What is a sandwich without cheese?", "price": 2.99, "name": "American Cheese", "description": "1lb of American Sliced Cheese"}]
 }

@@ -4,7 +4,7 @@
 
     <!-- Imports -->
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato|Merriweather' rel='stylesheet' type='text/css'>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -29,33 +29,39 @@
     <div class="bar"></div>
     <div class="container" ng-controller="storyController">
       <div class="sidebar">
+        <div class="budget" ng-show="showBudget">
+        <h4>Budget: ${{budget | number: 2}}</h4>
+        <h4>Current Cost: <span ng-class="totalCost() > budget ? 'red' : 'green'">${{ totalCost()| number: 2 }}</span></h4>
+        </div>
       </div>
-      <div class="story" ng-hide="currentFood">
+      <div class="story" ng-hide="currentFood" animate-on-change='currentStep.text'>
         <div class="content">
           <p>{{currentStep.text}}</p>
           <div class="cart ng-hide" ng-show="showCart">
             <div class="item" ng-repeat="item in cart">
-              <a href="#" class="options" ng-click="goToFoodItem(item)" ng-class="{strike: item.deleted}">
+              <a href="#" class="food-item" ng-click="goToFoodItem(item)" ng-class="{strike: item.deleted}">
               {{item.name}}
               </a>
             </div>
             <br />
           </div>
+          <div>
+            <a href="#" ng-click="goToStep('exit')" class="option" ng-class="{'strike no-pointer': totalCost() > budget}" ng-show="showCart">Pay for the items in your cart and go home.</a>
+          </div>
           <div ng-repeat="option in currentStep.options">
-            <a href="#" ng-click="goToStep(option.section)" class="options">{{option.description}}</a>
+            <a href="#" ng-click="goToStep(option.section)" class="option">{{option.description}}</a>
           </div>
         </div><!--.content-->
       </div><!--.story-->
-      <div class="story food-item ng-hide" ng-show="currentFood">
+      <div class="story food-item ng-hide" ng-show="currentFood" animate-on-change='currentFood.description'>
         <div class="content">
-          <p>{{currentFood.description}}</p>
-          <p>{{currentFood.price}}</p>
+          <p>{{currentFood.description}}<br /><span class="small">Price: ${{currentFood.price | number: 2}}</span></p>
           <p>{{currentFood.notes}}</p>
-          <a href="#" ng-hide="currentFood.deleted" ng-click="removeFoodItem(currentFood)" class="options">Remove from cart.</a>
+          <a href="#" ng-hide="currentFood.deleted" ng-click="removeFoodItem(currentFood)" class="option">Remove from cart.</a>
 
-          <a href="#" ng-show="currentFood.deleted" ng-click="addFoodItem(currentFood)" class="options">Add back to cart.</a>
+          <a href="#" ng-show="currentFood.deleted" ng-click="addFoodItem(currentFood)" class="option">Add back to cart.</a>
 
-          <a href="#" ng-click="goToCart()" class="options">Go back to cart.</a>
+          <a href="#" ng-click="goToCart()" class="option">Go back to cart.</a>
         </div>
       </div><!--.food-item-->
     </div>

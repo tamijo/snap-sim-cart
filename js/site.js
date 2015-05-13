@@ -1,5 +1,5 @@
-angular.module("story", [])
-  .controller("storyController",
+var app = angular.module("story", []);
+app.controller("storyController",
     function($scope){
 
       window.s = $scope;
@@ -11,7 +11,7 @@ angular.module("story", [])
       $scope.cart = [];
 
       // Get the foods as json data
-      $.getJSON("js/story.json", function(data){
+      $.getJSON("data/story_cart_2.json", function(data){
         // $scope.bio = data.bio;
         $scope.story = data["story"];
         console.log(data["shopping-cart-items"]);
@@ -21,8 +21,11 @@ angular.module("story", [])
         });
         $scope.currentStep = $scope.story["intro"];
         $scope.showCart = false;
+        $scope.showBudget = false;
         $scope.currentFood = null;
+        // $scope.currentBalance = $scope.totalCost();
         $scope.$apply();
+
       });
 
       $scope.goToStep = function(stepName) {
@@ -31,14 +34,17 @@ angular.module("story", [])
         }
         $scope.currentStep = $scope.story[stepName];
         $scope.showCart = (stepName === "shopping-cart");
+        // only change once
+        if (stepName === "shopping-cart") {
+          $scope.showBudget = true;
+        }
         console.log(stepName);
         console.log($scope.showCart);
-        $("body").animate({ scrollTop: $('body')[0].scrollHeight}, 1000);
+        // $("body").animate({ scrollTop: $('body')[0].scrollHeight}, 1000);
       }
 
       $scope.goToFoodItem = function(foodItem) {
         $scope.currentFood = foodItem;
-        // console.log(foodItem);
       }
 
       $scope.goToCart = function() {
@@ -64,8 +70,25 @@ angular.module("story", [])
               return item.price && !item.deleted;
             })
             .reduce(function(prev, next){
-              prev + (next.price ); // TODO add quantity
+              return prev + next.price; // TODO add quantity
             }, 0)
       }
 
-    });
+      $scope.budget = 86.2;
+
+});
+
+app.directive('animateOnChange', function($animate) {
+  console.log($animate);
+  return function(scope, elem, attr) {
+      scope.$watch(attr.animateOnChange, function(nv,ov) {
+        if (nv!== ov) {
+          var c = "animated fadeIn";
+          $animate.addClass(elem,c);
+          window.setTimeout(function() {
+            $(elem).removeClass(c);
+          }, 1000);
+        }
+      })
+  }
+});

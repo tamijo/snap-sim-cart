@@ -1,7 +1,7 @@
 body {
   background: white;
-  font-family: 'Lato', serif !important;
-    font-size: 2em;
+  font-family: 'Merriweather', sans-serif;
+    font-size: 1.3em;
     color: #333333;
   height: 100%;
   width: 100%;
@@ -9,12 +9,21 @@ body {
   margin: 0;
 }
 
-a {
-  color: #333;
+a.option {
+  /*color: #333;*/
   text-decoration: none;
-  border-bottom: 1px solid #333;
+  color: #5bbd72;
+  padding: 7px 0;
+  display: block;
 }
 
+a.food-item {
+  font-size: 1.1em;
+  padding: 4px 0;
+  display: block;
+  /*text-decoration: none;*/
+  color:#D17589;
+}
 body > .bar {
   position: fixed;
   z-index: 9999;
@@ -33,7 +42,11 @@ body > .container {
 }
 
 .red {
-  color: #fd6a62;
+  color: #fd6a62 !important;
+}
+
+.no-pointer {
+  pointer-events: none !important;
 }
 
 a.strike {
@@ -45,7 +58,9 @@ a.strike {
   width: 20%;
   height: 100%;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
 }
+
 
 .story {
   position: relative;
@@ -67,3 +82,13 @@ a.strike {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.small {
+  font-size: 0.8em;
+  color:gray;
+}
+
+.cart {
+  text-indent: 1.1em;
+}
+
