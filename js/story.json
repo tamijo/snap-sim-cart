@@ -1,0 +1,136 @@
+{
+  "story": {
+    "intro": {
+      "text": "You've just finished walking through the grocery store. You're tired, but you found everything you wanted on your shopping list.",
+      "options": [
+        {
+          "section": "checkout-start",
+          "description": "Checkout."
+        }
+      ]
+    },
+    "checkout-start": {
+      "text":"There are only two open cashiers, both with a long line of people. You pick the shortest one, and wait.",
+      "options": [
+        {
+          "section": "waiting",
+          "description": "Continue waiting."
+        }
+      ]
+    },
+    "waiting": {
+      "text":"The line grows behind you, as the second cashier has closed.",
+      "options": [
+        {
+          "section": "cashier",
+          "description": "Continue waiting."
+        }
+      ]
+    },
+    "cashier": {
+      "text":"You finally get to the front of the line. The cashier is tired, and hurriedly scans and pack your items into grocery bags.",
+      "options": [
+        {
+          "section": "paying",
+          "description": "Wonder how much the items will cost."
+        }
+      ]
+    },
+    "paying": {
+      "text":"She runs up all the items before you get a chance to look over the prices. When she asks for your method of payment, you realize the total cost is more than the money you have left on your SNAP card. You don't have any extra cash with you. You get nervous, as the line behind you keeps getting longer.",
+      "options": [
+        {
+          "section": "coupons",
+          "description": "Ask the cashier if she has any coupons."
+        },
+        {
+          "section": "shopping-cart",
+          "description": "Apologize, and ask to take out some items."
+        },
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase and leave."
+        }
+      ]
+    },
+    "coupons": {
+      "text":"",
+      "options": []
+    },
+    "give-up": {
+      "text":"",
+      "options": []
+    },
+      "shopping-cart": {
+      "text":"Here are all of the items in your shopping cart.",
+      "options": [
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase and leave."
+        }
+      ]
+    }
+  },
+  "shopping-cart-items": [
+    {
+      "notes": "Kids need the calcium and vitamin D in milk. But on top of that, Paul has been having trouble sleeping recently, and a glass of milk before bed helps him sleep.",
+      "price": 1.29,
+      "name": "Whole milk",
+      "description": "A gallon of Greenshop-brand whole milk"
+    },
+    {
+      "notes": "It's not as healthy as organic greek yogurt, but the kids need something for their snack time at school. The past few weeks, they haven't been taking anything.",
+      "price": 2.0,
+      "name": "Yogurt",
+      "description": "6-pack of 'Danimals' yogurt cups"
+    },
+    {
+      "notes": "Protein rich - a healthy option for the childens' snacktime at school",
+      "price": 5.0,
+      "name": "Greek Yogurt",
+      "description": "Organic, greek yogurt"
+    },
+    {
+      "notes": "Working a 10 hour day is exhausting, and this would save Alexa a great deal of time from cooking which she instead use to spend time with her children",
+      "price": 2.0,
+      "name": "Frozen macaroni and cheese",
+      "description": "Macaroni and cheese - serves 3"
+    },
+    {
+      "notes": "It's important to get vegetables, and while these aren't as healthy or tasty as fresh vegetables, they do save Alexa the time of cutting the vegetables. But, it has been hard to get Paul and Sophie to eat the vegetables - they tend to throw them away",
+      "price": 1.0,
+      "name": "Mixed vegetables",
+      "description": "A bag of frozen corn, peas, and carrots"
+    },
+    {
+      "notes": "The past two months, the family has been eating cereal for breakfast. The kids (and Alexa) have been getting sick of it, so this would be a nice treat to start the day",
+      "price": 2.0,
+      "name": "Frozen waffles",
+      "description": "8 Eggo frozen waffles"
+    },
+    {
+      "notes": "This would be a quick and convenient snack for the family. However, it's quite pricy",
+      "price": 2.99,
+      "name": "Apples",
+      "description": "Bag of 8 apples"
+    },
+    {
+      "notes": "While expensive, the kids might actually eat this",
+      "price": 0.99,
+      "name": "Mango",
+      "description": "Ataulfo mangos"
+    },
+    {
+      "notes": "These look nice, but Alexa doesn't know when she'll have the time to actually cook them in something",
+      "price": 1.49,
+      "name": "Mini sweet peppers",
+      "description": "A pound of sweet Italian Cubanelle peppers"
+    },
+    {
+      "notes": "Cooking these into a dish may be hard, but Alexa thinks she may be able to steam them. But would the kids eat this?",
+      "price": 2.0,
+      "name": "Green beans",
+      "description": "A 12 oz bag of green beans"
+    }
+  ]
+}
