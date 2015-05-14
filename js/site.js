@@ -23,6 +23,7 @@ app.controller("storyController",
         $scope.showCart = false;
         $scope.showBudget = false;
         $scope.currentFood = null;
+        $scope.showExitLink = false;
         // $scope.currentBalance = $scope.totalCost();
         $scope.$apply();
 
@@ -38,9 +39,10 @@ app.controller("storyController",
         if (stepName === "shopping-cart") {
           $scope.showBudget = true;
         }
-        console.log(stepName);
-        console.log($scope.showCart);
-        // $("body").animate({ scrollTop: $('body')[0].scrollHeight}, 1000);
+        if (stepName === "exit") {
+          $scope.showExitLink = true;
+          $scope.showBudget = false;
+        }
       }
 
       $scope.goToFoodItem = function(foodItem) {

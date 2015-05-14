@@ -51,6 +51,9 @@
           <div ng-repeat="option in currentStep.options">
             <a href="#" ng-click="goToStep(option.section)" class="option">{{option.description}}</a>
           </div>
+          <div>
+          <a href="https://hahasubbu.cartodb.com/viz/f5b58732-f8f2-11e4-b28c-0e4fddd5de28/public_map" ng-show="showExitLink" class="option">Explore.</a>
+        </div>
         </div><!--.content-->
       </div><!--.story-->
       <div class="story food-item ng-hide" ng-show="currentFood" animate-on-change='currentFood.description'>
@@ -65,5 +68,6 @@
         </div>
       </div><!--.food-item-->
     </div>
+
   </body>
 </html>
