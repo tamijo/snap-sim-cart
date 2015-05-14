@@ -67,10 +67,10 @@ app.controller("storyController",
       $scope.totalCost = function(){
         return $scope.cart
             .filter(function(item){
-              return item.price && !item.deleted;
+              return (item.price * item.quantity) && !item.deleted;
             })
             .reduce(function(prev, next){
-              return prev + next.price; // TODO add quantity
+              return prev + (next.price * next.quantity); // TODO add quantity
             }, 0)
       }
 

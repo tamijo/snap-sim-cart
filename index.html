@@ -55,7 +55,7 @@
       </div><!--.story-->
       <div class="story food-item ng-hide" ng-show="currentFood" animate-on-change='currentFood.description'>
         <div class="content">
-          <p>{{currentFood.description}}<br /><span class="small">Price: ${{currentFood.price | number: 2}}</span></p>
+          <p>{{currentFood.description}}<br /><span class="small">Price: {{currentFood.quantity}} &times ${{currentFood.price | number: 2}}</span></p>
           <p>{{currentFood.notes}}</p>
           <a href="#" ng-hide="currentFood.deleted" ng-click="removeFoodItem(currentFood)" class="option">Remove from cart.</a>
 
