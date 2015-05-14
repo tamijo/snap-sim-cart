@@ -1,0 +1,84 @@
+{
+  "story": {
+    "intro": {
+      "text": "You've just finished walking through the grocery store. You're tired, but you found everything you wanted on your shopping list.",
+      "options": [
+        {
+          "section": "checkout-start",
+          "description": "Checkout."
+        }
+      ]
+    },
+    "checkout-start": {
+      "text":"There are only two open cashiers, both with a long line of people. You pick the shortest one, and wait.",
+      "options": [
+        {
+          "section": "waiting",
+          "description": "Continue waiting."
+        }
+      ]
+    },
+    "waiting": {
+      "text":"The line grows behind you, as the second cashier has closed.",
+      "options": [
+        {
+          "section": "cashier",
+          "description": "Continue waiting."
+        }
+      ]
+    },
+    "cashier": {
+      "text":"You finally get to the front of the line. The cashier is tired, and hurriedly scans and pack your items into grocery bags.",
+      "options": [
+        {
+          "section": "paying",
+          "description": "Try to keep up."
+        }
+      ]
+    },
+    "paying": {
+      "text":"She runs up all the items before you get a chance to look over the prices. When she asks for your method of payment, you realize the total cost is more than the money you have left on your SNAP card. You don't have any extra cash with you. You get nervous, as the line behind you keeps getting longer.",
+      "options": [
+        {
+          "section": "coupons",
+          "description": "Ask the cashier if she has any coupons."
+        },
+        {
+          "section": "shopping-cart",
+          "description": "Apologize, and ask to take out some items."
+        },
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase, and leave."
+        }
+      ]
+    },
+    "coupons": {
+      "text":"The person behind you coughs. The cashier shakes her head, and asks again how you'd like to pay for your food.",
+      "options": [
+        {
+          "section": "shopping-cart",
+          "description": "Apologize, and ask to take out some items."
+        },
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase, and leave."
+        }
+      ]
+    },
+    "give-up": {
+      "text":"The cashier isn't happy to hear that she'll have to put all of the food you didn't purchase away, and hurriedly moves on to the next customer. As you walk away, you remember that you'll have to find something for your two children to eat for dinner.",
+      "options": []
+    },
+      "shopping-cart": {
+      "text":"Here are all of the items in your shopping cart.",
+      "options": [
+        {
+          "section": "give-up",
+          "description": "Cancel your purchase, and leave."
+        }
+      ]
+    }
+  },
+  "shopping-cart-items":[{"notes": "Kids need the calcium and vitamin D in milk. But on top of that, Paul has been having trouble sleeping recently, and a glass of milk before bed helps him sleep.", "price": 6.38, "name": "Whole milk", "description": "Two gallons of Shaws-Brand Whole Milk"}, {"notes": "It's not as healthy as organic greek yogurt, but the kids need something for their snack time at school. The past few weeks, they haven't been taking anything.", "price": 4.0, "name": "Yogurt", "description": "12-pack of 'Danimals' yogurt cups"}, {"notes": "Protein rich - a healthy option for the childens' snacktime at school", "price": 5.0, "name": "Greek Yogurt", "description": "Organic, greek yogurt"}, {"notes": "Working a 10 hour day is exhausting, and this would save Alexa a great deal of time from cooking which she instead use to spend time with her children", "price": 6.0, "name": "Frozen macaroni and cheese", "description": "Three Meals of Macaroni and Cheese (serves 3 each meal)"}, {"notes": "It's important to get vegetables, and while these aren't as healthy or tasty as fresh vegetables, they do save Alexa the time of cutting the vegetables. But, it has been hard to get Paul and Sophie to eat the vegetables - they tend to throw them away.", "price": 2.0, "name": "Mixed vegetables", "description": "A large bag of frozen corn, peas, and carrots"}, {"notes": "The past two months, the family has been eating cereal for breakfast. The kids (and Alexa) have been getting sick of it, so this would be a nice treat to start the day", "price": 2.0, "name": "Frozen waffles", "description": "8 Eggo frozen waffles"}, {"notes": "A summer treat and Sophie's favourite flavor. Bringing this home would make the kids really happy, especially since you haven't been able to spend as much time with them lately.", "price": 5.0, "name": "Hood Ice Cream", "description": "From the New England Creamery"}, {"notes": "All you have to do is put this in the microwave and boom! Instant dinner. This is a quick solution", "price": 11.39, "name": "Healthy Choice Frozen Dinner", "description": "Three Frozen Dinners"}, {"notes": "Paul inhales these like they're air and Sophie loves taking them for her school snacks.", "price": 4.0, "name": "Cole's Cheesesticks", "description": "A 22oz Package: Asiago and Prezel"}, {"notes": "This would be a quick and convenient snack for the family. However, it's quite pricy.", "price": 2.99, "name": "Apples", "description": "Bag of 8 apples"}, {"notes": "While expensive, the kids might actually eat this.", "price": 0.99, "name": "Mango", "description": "Ataulfo mangos"}, {"notes": "These look nice, but Alexa doesn't know when she'll have the time to actually cook them in something.", "price": 1.49, "name": "Mini sweet peppers", "description": "A pound of sweet Italian Cubanelle peppers"}, {"notes": "Cooking these into a dish may be hard, but Alexa thinks she may be able to steam them. But would the kids eat this?", "price": 2.0, "name": "Green beans", "description": "A 12 oz bag of green beans"}, {"notes": "Cooking these will take some time, but the kids always like your potatoes.", "price": 2.29, "name": "Potatoes", "description": "A 5lb bag of Florida Red Potatoes"}, {"notes": "These are pricy, but your absolute favorite fruit. You've been working really hard lately, don't you deserve a treat?", "price": 2.5, "name": "Raspberries", "description": "6oz Package of Driscoll's Premium Raspberries"}, {"notes": "This would make for great sandwiches. Sophie strongly dislikes the school lunches, but has been eating them because she is a good sport. Buying her some sandwich supplies would make her very happy.", "price": 4.99, "name": "Ham", "description": "1lb of Thinly Sliced Cooked Ham"}, {"notes": "What is a sandwich without cheese?", "price": 2.99, "name": "American Cheese", "description": "1lb of American Sliced Cheese"}, {"notes": "All natural. The kids always love your chicken, only problem is finding the time to cook it. You don't even get home from work until after 6pm.", "price": 1.99, "name": "Chicken", "description": "1lb of Boneless Chicken Thighs"}, {"notes": "What is a sandwich without cheese?", "price": 2.99, "name": "American Cheese", "description": "1lb of American Sliced Cheese"}, {"notes": "These are Sophie's favorite chips.", "price": 2.5, "name": "Kettle Potato Chips", "description": "8.5oz Bag of Potato Chips"}, {"notes": "These are Paul's favorite chips.", "price": 2.5, "name": "Doritos", "description": "11oz Bag of Cheesy Doritos"}, {"notes": "These are your favorite chips.", "price": 2.5, "name": "El Sabroso Tortilla Chips", "description": "12oz Bag of Potato Chips"}, {"notes": "Everyone in the family likes apple juice. Without this, there will be nothing to balance the dryness of the chips in your mouth.", "price": 2.5, "name": "Apple Juice", "description": "Apple & Eve 100% Apple Juice, 64oz Bottle"}]
+}
